@@ -1,6 +1,5 @@
 cloudflared.exe
 *.exe
-*.mp4
-assets/videos/
+assets/videos/global-profile.mp4
 .DS_Store
 Thumbs.db

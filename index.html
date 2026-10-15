@@ -108,46 +108,30 @@
       </div>
 
       <div class="hero-visual">
-        <div class="hero-visual-card">
-          <div class="hero-visual-header">
-            <div class="hero-visual-brand">
-              <img src="assets/logo-icon.svg" alt="Global Group Icon" class="hero-visual-logo">
-              <div>
-                <div class="hero-visual-name">Global Group Apex</div>
-                <div class="hero-visual-tag">Holding Portfolio</div>
+        <div class="hero-video-card">
+          <div class="hero-video-wrapper">
+            <video id="heroCorporateVideo" class="hero-video-element" autoplay loop muted playsinline preload="auto" controls poster="assets/companies/sigiriya-resort.jpg">
+              <source src="assets/videos/corporate-reel.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+            <div class="hero-video-overlay-header">
+              <div class="hero-video-tag">
+                <span class="live-dot"></span>
+                <span>GLOBAL GROUP FILM</span>
+              </div>
+              <div class="hero-video-controls">
+                <button type="button" id="heroSoundToggleBtn" class="btn-video-audio" title="Toggle Sound">
+                  <span id="soundLabel">🔊 Unmute</span>
+                </button>
               </div>
             </div>
-            <span style="font-size: 0.75rem; color: var(--red-light); font-weight: 700; background: rgba(230,29,43,0.15); padding: 4px 10px; border-radius: 9999px;">EST. SRI LANKA</span>
           </div>
-
-          <div class="hero-showcase-image-wrapper">
-            <img src="assets/companies/sigiriya-resort.jpg" alt="Grand Aura Sigiriya" class="hero-showcase-image">
-            <div class="hero-showcase-overlay">
-              <div>
-                <div class="hero-showcase-title">Grand Aura Sigiriya</div>
-                <div style="font-size: 0.75rem; color: #a1a9b8;">5-Star Eco Resort Destination</div>
-              </div>
-              <span class="hero-showcase-badge">Hospitality</span>
+          <div class="hero-video-footer">
+            <div>
+              <div class="hero-video-info-title">Corporate Leadership & Impact Reel</div>
+              <div class="hero-video-info-sub">14 Strategic Conglomerate Subsidiaries | Sri Lanka</div>
             </div>
-          </div>
-
-          <div class="hero-visual-features">
-            <div class="feature-pill">
-              <span class="feature-icon-red">&#9670;</span>
-              <span>Wealth & Asset Mgmt</span>
-            </div>
-            <div class="feature-pill">
-              <span class="feature-icon-red">&#9670;</span>
-              <span>Global Stanford Campus</span>
-            </div>
-            <div class="feature-pill">
-              <span class="feature-icon-red">&#9670;</span>
-              <span>Diplomatic VIP Mobility</span>
-            </div>
-            <div class="feature-pill">
-              <span class="feature-icon-red">&#9670;</span>
-              <span>Nano Bio-Fertilizer</span>
-            </div>
+            <a href="leadership.html" class="btn-profile-link" style="font-size: 0.78rem;">Governance &rarr;</a>
           </div>
         </div>
       </div>
@@ -232,52 +216,51 @@
     <div class="container">
       <div class="section-head">
         <span class="section-subtitle" data-en="EXECUTIVE GOVERNANCE" data-si="විධායක පාලනය">EXECUTIVE GOVERNANCE</span>
-        <h2 class="section-title" data-en="Guided by Visionary Leadership" data-si="දූරදර්ශී නායකත්වයේ මඟපෙන්වීම">Guided by Visionary Leadership</h2>
-        <p class="section-desc" data-en="Steered by distinguished academic doctorates and veteran institutional managers committed to corporate stewardship and nation-building." data-si="ආචාර්ය උපාධිධාරී ප්‍රවීණ විද්වතුන් සහ ව්‍යාපාරික නායකයින්ගේ මඟපෙන්වීම යටතේ ග්ලෝබල් සමූහය ඉදිරියට ගමන් කරයි.">
-          Steered by distinguished academic doctorates and veteran institutional managers committed to corporate stewardship and nation-building.
+        <h2 class="section-title" data-en="Executive Leadership" data-si="විධායක නායකත්වය">Executive Leadership</h2>
+        <p class="section-desc" data-en="Governed by distinguished academic leadership driving national economic growth and corporate excellence." data-si="ආචාර්ය උපාධිධාරී ප්‍රවීණ විද්වතුන්ගේ නායකත්වය යටතේ ග්ලෝබල් සමූහය ඉදිරියට ගමන් කරයි.">
+          Governed by distinguished academic leadership driving national economic growth and corporate excellence.
         </p>
       </div>
 
-      <div class="leadership-grid">
-        <!-- Chairman Card -->
-        <div class="leader-card">
+      <!-- Hierarchical Leadership Structure: Chairman (Apex / Larger) & CEO (Executive / Smaller) -->
+      <div class="leadership-hierarchy-container">
+        
+        <!-- 1. Chairman Card (Prominent Apex Leader - Larger & Featured) -->
+        <div class="leader-card-chairman" id="chairmanSpotlight">
           <img src="assets/leadership/dr-sampath-bandara-banner.jpg" alt="Dr. Sampath Bandara - Chairman" class="leader-banner-img">
           <div class="leader-body">
-            <span class="leader-role-badge">Chairman of the Board</span>
+            <span class="leader-role-badge-apex">
+              <span>★ CHAIRMAN OF THE BOARD</span>
+            </span>
             <h3 class="leader-name">Dr. Sampath Bandara</h3>
             <p class="leader-degrees">PhD in Education, MBA, MED, BSc</p>
-            <p class="leader-bio" data-en="Dr. Sampath Bandara provides the visionary governance that steers Global Group across multi-sector enterprises, blending academic rigor with strategic institutional leadership." data-si="ආචාර්ය සම්පත් බණ්ඩාර මහතා ග්ලෝබල් සමූහයේ සභාපතිවරයා ලෙස උපායමාර්ගික හා ආයතනික දැක්ම මෙහෙයවයි.">
-              Dr. Sampath Bandara provides the visionary governance that steers Global Group across multi-sector enterprises, blending academic rigor with strategic institutional leadership.
-            </p>
-            <div class="leader-card-footer">
-              <span class="leader-org">Board of Directors</span>
+            <div class="leader-card-footer-clean">
+              <span style="font-size: 0.85rem; font-weight: 700; color: #ffd700; letter-spacing: 0.5px;">Apex Board Governance</span>
               <a href="leadership.html#dr-sampath-bandara" class="btn-profile-link">
-                <span>View Full Executive Profile</span>
+                <span>View Full Profile</span>
                 <span>&rarr;</span>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- CEO Card -->
-        <div class="leader-card">
+        <!-- 2. CEO Card (Subordinate Executive Level - Smaller & Streamlined) -->
+        <div class="leader-card-ceo" id="ceoSpotlight">
           <img src="assets/leadership/dr-asanka-weerasinghe-banner.jpg" alt="Dr. Asanka Weerasinghe - CEO" class="leader-banner-img">
           <div class="leader-body">
-            <span class="leader-role-badge">Chief Executive Officer</span>
+            <span class="leader-role-badge-exec">CHIEF EXECUTIVE OFFICER</span>
             <h3 class="leader-name">Dr. Asanka Weerasinghe</h3>
             <p class="leader-degrees">PhD in Management, PGD in Business Management, B.Sc (Mgt)(Pub)SP, Honce, ICA (f), LICA</p>
-            <p class="leader-bio" data-en="Dr. Asanka Weerasinghe champions operational execution, fiscal integrity, and strategic expansion across all 14 subsidiaries with extensive management and accounting credentials." data-si="ආචාර්ය අසංක වීරසිංහ මහතා ග්ලෝබල් සමූහයේ ප්‍රධාන විධායක නිලධාරී ලෙස සමූහයේ මෙහෙයුම් සහ මූල්‍ය වර්ධනය මෙහෙයවයි.">
-              Dr. Asanka Weerasinghe champions operational execution, fiscal integrity, and strategic expansion across all 14 subsidiaries with extensive management and accounting credentials.
-            </p>
-            <div class="leader-card-footer">
-              <span class="leader-org">Chief Executive Officer</span>
+            <div class="leader-card-footer-clean">
+              <span style="font-size: 0.82rem; font-weight: 600; color: var(--text-muted);">Executive Operations Directorate</span>
               <a href="leadership.html#dr-asanka-weerasinghe" class="btn-profile-link">
-                <span>View Full Executive Profile</span>
+                <span>View Full Profile</span>
                 <span>&rarr;</span>
               </a>
             </div>
           </div>
         </div>
+
       </div>
 
       <div class="leadership-more-cta">

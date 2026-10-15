@@ -203,12 +203,26 @@ document.addEventListener('DOMContentLoaded', () => {
   initModal();
   initLanguageToggle();
   initContactForm();
+  initHeroVideoSound();
   
   // If on leadership page, render leadership
   if (document.getElementById('leadershipGridFull')) {
     renderLeadershipPage();
   }
 });
+
+// Hero Corporate Video Sound Toggle
+function initHeroVideoSound() {
+  const video = document.getElementById('heroCorporateVideo');
+  const btn = document.getElementById('heroSoundToggleBtn');
+  const soundLabel = document.getElementById('soundLabel');
+  if (!video || !btn || !soundLabel) return;
+
+  btn.addEventListener('click', () => {
+    video.muted = !video.muted;
+    soundLabel.innerHTML = video.muted ? '🔇 Unmute' : '🔊 Mute Audio';
+  });
+}
 
 // Navbar Scroll Effect
 function initNavbarScroll() {
@@ -477,47 +491,62 @@ function initContactForm() {
   });
 }
 
-// Render Dedicated Leadership Page
+// Render Dedicated Leadership Page with Distinct Hierarchy & Clean Minimalist Details
 function renderLeadershipPage() {
   const grid = document.getElementById('leadershipGridFull');
   if (!grid) return;
 
-  const cardsHtml = leadershipData.map(leader => `
-    <div class="leader-card" id="${leader.id}">
-      <img src="${leader.banner}" alt="${leader.name}" class="leader-banner-img">
+  grid.className = 'leadership-hierarchy-container';
+
+  const chairman = leadershipData.find(l => l.id === 'dr-sampath-bandara');
+  const ceo = leadershipData.find(l => l.id === 'dr-asanka-weerasinghe');
+
+  const chairmanHtml = chairman ? `
+    <div class="leader-card-chairman" id="${chairman.id}">
+      <img src="${chairman.banner}" alt="${chairman.name}" class="leader-banner-img">
       <div class="leader-body">
-        <span class="leader-role-badge">${leader.role}</span>
-        <h2 class="leader-name">${leader.name}</h2>
-        <p class="leader-degrees">${leader.qualifications}</p>
-        <p class="leader-bio">${leader.bio}</p>
-        <div style="margin-bottom: 20px;">
-          <h4 style="font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.6px; color: var(--red-light); margin-bottom: 8px;">Key Executive Focus</h4>
-          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-            ${leader.focus.map(f => `<span style="font-size: 0.78rem; padding: 4px 10px; background: rgba(255,255,255,0.05); border: 1px solid var(--border-light); border-radius: 9999px; color: var(--text-muted);">${f}</span>`).join('')}
-          </div>
-        </div>
-        <div class="leader-card-footer">
-          <span class="leader-org">Global Group Apex Board</span>
+        <span class="leader-role-badge-apex">★ CHAIRMAN OF THE BOARD</span>
+        <h2 class="leader-name">${chairman.name}</h2>
+        <p class="leader-degrees">${chairman.qualifications}</p>
+        <div class="leader-card-footer-clean">
+          <span style="font-size: 0.85rem; font-weight: 700; color: #ffd700; letter-spacing: 0.5px;">Apex Board Governance</span>
           <a href="index.html#contact" class="btn-profile-link">
-            <span>Direct Governance Inquiry</span>
+            <span>Direct Board Contact</span>
             <span>&rarr;</span>
           </a>
         </div>
       </div>
     </div>
-  `).join('');
+  ` : '';
 
-  // Add the modular "+ Add Board Member" placeholder card for future additions
+  const ceoHtml = ceo ? `
+    <div class="leader-card-ceo" id="${ceo.id}">
+      <img src="${ceo.banner}" alt="${ceo.name}" class="leader-banner-img">
+      <div class="leader-body">
+        <span class="leader-role-badge-exec">CHIEF EXECUTIVE OFFICER</span>
+        <h2 class="leader-name">${ceo.name}</h2>
+        <p class="leader-degrees">${ceo.qualifications}</p>
+        <div class="leader-card-footer-clean">
+          <span style="font-size: 0.82rem; font-weight: 600; color: var(--text-muted);">Executive Operations Directorate</span>
+          <a href="index.html#contact" class="btn-profile-link">
+            <span>Contact Secretariat</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  ` : '';
+
   const addMemberHtml = `
-    <div class="add-member-card" onclick="openAddMemberGuide()">
-      <div class="add-member-icon">+</div>
+    <div class="add-member-card" onclick="openAddMemberGuide()" style="max-width: 820px; margin: 0 auto; width: 100%; min-height: 220px;">
+      <div class="add-member-icon" style="width: 48px; height: 48px; font-size: 1.5rem; margin-bottom: 12px;">+</div>
       <h3 class="add-member-title">Add Executive / Director</h3>
-      <p class="add-member-desc">Easily append new board members, executives, or advisory directors to this governance portal.</p>
-      <button class="btn-secondary" style="font-size: 0.85rem; padding: 8px 20px;">View Integration Guide</button>
+      <p class="add-member-desc">Append new board members or executive directors to this governance portal.</p>
+      <button class="btn-secondary" style="font-size: 0.82rem; padding: 6px 18px;">View Integration Guide</button>
     </div>
   `;
 
-  grid.innerHTML = cardsHtml + addMemberHtml;
+  grid.innerHTML = chairmanHtml + ceoHtml + addMemberHtml;
 }
 
 // Open Simple Modal / Alert for Adding More Members

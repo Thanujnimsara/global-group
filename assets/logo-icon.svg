@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 280" width="100%" height="100%">
+  <defs>
+    <!-- Primary vibrant red gradient -->
+    <linearGradient id="redGradMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF3843"/>
+      <stop offset="60%" stop-color="#E21B28"/>
+      <stop offset="100%" stop-color="#BD0E1A"/>
+    </linearGradient>
+
+    <!-- Deep shadow facet red gradient -->
+    <linearGradient id="redGradDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D91624"/>
+      <stop offset="100%" stop-color="#8F0510"/>
+    </linearGradient>
+
+    <!-- Soft glow effect -->
+    <filter id="crimsonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#E21B28" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <g id="emblem" filter="url(#crimsonGlow)">
+    <!-- Top Slanted Parallelogram Wing -->
+    <polygon points="148,22 210,22 84,148 22,148" fill="url(#redGradMain)" />
+
+    <!-- Lower Fold - Upper Wing Facet -->
+    <polygon points="144,110 210,110 128,192 68,132" fill="url(#redGradMain)" />
+
+    <!-- Lower Fold - Bottom Wing Facet (Fold shadow) -->
+    <polygon points="128,192 210,242 165,242 98,162" fill="url(#redGradDark)" />
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#075985"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#0D131F" stroke="#0284C7" stroke-opacity="0.4" stroke-width="2"/>
+  <rect x="6" y="6" width="52" height="52" rx="10" fill="url(#g)" fill-opacity="0.18"/>
+  <circle cx="32" cy="24" r="14" fill="url(#g)" fill-opacity="0.9"/>
+  <text x="32" y="29" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="900" text-anchor="middle" fill="#FFFFFF">FC</text>
+  <text x="32" y="52" font-family="'Outfit', sans-serif" font-size="8.5" font-weight="800" letter-spacing="1" text-anchor="middle" fill="#0284C7">FRANCHISE</text>
+</svg>

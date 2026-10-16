@@ -703,21 +703,21 @@ ul {
 }
 
 .leadership-hierarchy-container {
-  max-width: 980px;
-  margin: 0 auto 40px;
+  max-width: 680px;
+  margin: 0 auto 36px;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 28px;
 }
 
 /* 1. Chairman Card (Prominent Apex Leader - Larger & Featured) */
 .leader-card-chairman {
   position: relative;
   background: linear-gradient(135deg, rgba(24, 28, 38, 0.95) 0%, rgba(18, 20, 26, 0.95) 100%);
-  border: 2px solid rgba(230, 29, 43, 0.55);
-  border-radius: var(--radius-lg);
+  border: 1.5px solid rgba(230, 29, 43, 0.45);
+  border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: var(--shadow-lg), 0 0 40px rgba(230, 29, 43, 0.25);
+  box-shadow: var(--shadow-md), 0 0 30px rgba(230, 29, 43, 0.2);
   transition: all var(--transition-normal);
 }
 
@@ -727,25 +727,27 @@ ul {
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
+  height: 3px;
   background: linear-gradient(90deg, #ffd700 0%, #e61d2b 50%, #ffd700 100%);
 }
 
 .leader-card-chairman:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   border-color: var(--red-light);
-  box-shadow: var(--shadow-lg), 0 0 50px rgba(230, 29, 43, 0.35);
+  box-shadow: var(--shadow-lg), 0 0 40px rgba(230, 29, 43, 0.3);
 }
 
 .leader-card-chairman .leader-banner-img {
   width: 100%;
   aspect-ratio: 16/7;
+  max-height: 295px;
   object-fit: cover;
   border-bottom: 1px solid rgba(230, 29, 43, 0.25);
+  display: block;
 }
 
 .leader-card-chairman .leader-body {
-  padding: 30px 36px;
+  padding: 20px 24px;
   display: flex;
   flex-direction: column;
 }
@@ -753,34 +755,43 @@ ul {
 .leader-role-badge-apex {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   align-self: flex-start;
-  padding: 6px 16px;
+  padding: 4px 12px;
   background: linear-gradient(135deg, rgba(230, 29, 43, 0.25) 0%, rgba(200, 160, 50, 0.2) 100%);
-  border: 1px solid rgba(230, 29, 43, 0.5);
+  border: 1px solid rgba(230, 29, 43, 0.45);
   border-radius: var(--radius-full);
-  font-size: 0.82rem;
+  font-size: 0.74rem;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   color: #ffd700;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .leader-card-chairman .leader-name {
   font-family: var(--font-head);
-  font-size: 2.1rem;
+  font-size: 1.65rem;
   font-weight: 800;
   color: #ffffff;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
+  line-height: 1.25;
 }
 
 .leader-card-chairman .leader-degrees {
-  font-size: 1.05rem;
-  font-weight: 700;
+  font-size: 0.92rem;
+  font-weight: 600;
   color: #ffd700;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   letter-spacing: 0.3px;
+  line-height: 1.4;
+}
+
+.leader-brief-desc {
+  font-size: 0.88rem;
+  color: #a6b0c2;
+  line-height: 1.55;
+  margin-bottom: 14px;
 }
 
 /* 2. CEO Card (Subordinate Executive Level - Smaller & Streamlined) */
@@ -790,28 +801,30 @@ ul {
   border: 1px solid var(--border-card);
   border-radius: var(--radius-md);
   overflow: hidden;
-  max-width: 820px;
+  max-width: 620px;
   margin: 0 auto;
   width: 100%;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-sm);
   transition: all var(--transition-normal);
 }
 
 .leader-card-ceo:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   border-color: rgba(230, 29, 43, 0.4);
-  box-shadow: var(--shadow-lg), 0 0 25px rgba(230, 29, 43, 0.15);
+  box-shadow: var(--shadow-md), 0 0 20px rgba(230, 29, 43, 0.15);
 }
 
 .leader-card-ceo .leader-banner-img {
   width: 100%;
   aspect-ratio: 16/7;
+  max-height: 265px;
   object-fit: cover;
   border-bottom: 1px solid var(--border-light);
+  display: block;
 }
 
 .leader-card-ceo .leader-body {
-  padding: 22px 30px;
+  padding: 18px 22px;
   display: flex;
   flex-direction: column;
 }
@@ -819,31 +832,32 @@ ul {
 .leader-role-badge-exec {
   display: inline-block;
   align-self: flex-start;
-  padding: 4px 12px;
+  padding: 3px 10px;
   background: rgba(230, 29, 43, 0.12);
   border: 1px solid rgba(230, 29, 43, 0.3);
   border-radius: var(--radius-full);
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.6px;
   color: var(--red-light);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .leader-card-ceo .leader-name {
   font-family: var(--font-head);
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 4px;
+  line-height: 1.25;
 }
 
 .leader-card-ceo .leader-degrees {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: #cfd5e2;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   line-height: 1.4;
 }
 
@@ -851,12 +865,8 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 14px;
+  padding-top: 12px;
   border-top: 1px solid var(--border-light);
-}
-
-  margin-bottom: 16px;
-  line-height: 1.4;
 }
 
 .leader-bio {

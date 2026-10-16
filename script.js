@@ -508,6 +508,7 @@ function renderLeadershipPage() {
         <span class="leader-role-badge-apex">★ CHAIRMAN OF THE BOARD</span>
         <h2 class="leader-name">${chairman.name}</h2>
         <p class="leader-degrees">${chairman.qualifications}</p>
+        <p class="leader-brief-desc">Guiding strategic governance, human capital excellence, and multi-sector corporate vision across Global Group.</p>
         <div class="leader-card-footer-clean">
           <span style="font-size: 0.85rem; font-weight: 700; color: #ffd700; letter-spacing: 0.5px;">Apex Board Governance</span>
           <a href="index.html#contact" class="btn-profile-link">
@@ -526,6 +527,7 @@ function renderLeadershipPage() {
         <span class="leader-role-badge-exec">CHIEF EXECUTIVE OFFICER</span>
         <h2 class="leader-name">${ceo.name}</h2>
         <p class="leader-degrees">${ceo.qualifications}</p>
+        <p class="leader-brief-desc">Spearheading enterprise operations, financial stewardship, and subsidiary synergies across Sri Lanka.</p>
         <div class="leader-card-footer-clean">
           <span style="font-size: 0.82rem; font-weight: 600; color: var(--text-muted);">Executive Operations Directorate</span>
           <a href="index.html#contact" class="btn-profile-link">
